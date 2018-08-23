@@ -1,0 +1,454 @@
+/* Custom CSS File */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    color: #111;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.header {
+    background-image: url("../images/background-blur.jpg");
+    color: white;
+}
+.custom-link-width {
+    margin: 0px 10px 0px 10px;
+    text-transform: uppercase;
+}
+
+.custom-jumbotron {
+    padding-top: 450px;
+    padding-bottom: 300px;
+    margin: 0 auto;
+    margin-top: -250px;
+    text-align: center;
+
+    font-family: "Playfair Display SC";
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px black;
+    -webkit-text-shadow: 1px 1px 2px black;
+}
+.custom-jumbotron .intro-text {
+    font-size: 30px;
+}
+.custom-jumbotron .header-text {
+    font-size: 84px;
+}
+.custom-jumbotron .outro-text {
+    font-size: 30px;
+}
+.custom-about {
+    padding: 80px;
+}
+.custom-about h2 {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+.custom-portfolio {
+    background: #eee;
+    padding: 80px;
+}
+.custom-portfolio a:hover {
+    color: #0069D9;
+}
+
+.custom-contact {
+    background: #0069D9;
+    padding: 80px;
+}
+.custom-success {
+    background: #218838;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.custom-error {
+    background: #8B0101;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.custom-footer {
+    padding: 30px 0px 30px 0px;
+}
+.custom-bubble {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background: #111;
+    color: white;
+    float: right;
+    margin: 5px;
+}
+.custom-header {
+    font-size: 56px;
+    font-weight: bold;
+    font-size: "Open Sans";
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.custom-subtitle {
+    font-size: 18px;
+    text-align: center;
+}
+.custom-btn {
+    margin: 15px 0px 15px 0px;
+    width: 200px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.custom-card {
+    margin-bottom: 20px;
+}
+.custom-input {
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 100%;    
+    border-radius: 3px;
+    border: 0px;
+    box-shadow: inset 1px 1px 4px #ccc;
+}
+.custom-input::placeholder {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.custom-about-border {
+    border-left: 3px solid #ccc;
+}
+.custom-interests {
+    color: #555;
+    font-size: 36px;
+    margin-right: 20px;
+}
+.custom-interests .fa-circle {
+    text-shadow: 0px 0px 2px #111;
+}
+.custom-h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0px;
+    display: inline;
+    color: #555;
+}
+.custom-subtext {
+    color: #888;
+    margin-left: 97px;
+    margin-top: -30px;
+}
+.custom-bio p {
+    padding-right: 50px;
+}
+.custom-warning {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background: red;
+    display: none;
+}
+
+.blog-title {
+    font-size: 36px;
+    padding: 0px;
+    margin: 0px;
+}
+.blog-title a {
+    color: #444;
+}
+.blog-title a:hover {
+    color: #777;
+}
+.blog-content img {
+    display: block;
+    height: 25vh;
+}
+.blog-img-left {
+    float: left;
+    margin-right: 20px;
+}
+.blog-img-right {
+    float: right;
+    margin-left: 20px;
+}
+.blog-img-center {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+}
+.blog-author {
+    font-size: 14px;
+    font-weight: normal;
+    color: #aaa;
+    margin-bottom: 5px;
+    
+    /*text-align: right;
+    border-top: 1px solid #dcdcdc;*/
+}
+.blog-author a {
+    font-weight: bold;
+    color: #959595;
+}
+.blog-archives a:hover {
+    color: purple;
+}
+.blog-fade-text {
+    background-image: url("http://ryan-coulson.com/blog/media/fade-text.png");
+    background-repeat: repeat-x;
+    display: fixed;
+    width: 100%;
+    height: 30px;
+    margin-top: -30px;
+    z-index: 1;
+    opacity: .9;
+}
+.blog-textarea {
+    border: 0px;
+    padding: 5px;
+    width: 100%;
+}
+.blog-header {
+    font-size: 28px;
+    line-height: 40px;
+    color: #444;
+}
+.blog-subheader {
+    font-size: 22px;
+    line-height: 40px;
+    color: #444;
+}
+.breadcrumbs {
+    font-size: 14px;
+    color: black;
+}
+.breadcrumbs a {
+    color: #ccc;
+}
+.breadcrumbs a:hover {
+    color: #aaa;
+}
+.blog-tag {
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.cardholder {
+    margin: 0 auto;
+}
+.project-placeholder {
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bototm
+}
+.col-sm {
+    background-color: white;
+    margin:10px;
+    padding:0px;
+}
+.project-data {
+    font-weight: bold;
+    text-align: right;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+    cursor: default;
+}
+.project-image {
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+.project-image-lg {
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+.project-image-lg img {
+    width: 100%;
+}
+.project-image img {
+    width: 100%;
+}
+.project-body {
+    margin: 0 auto;
+    padding:20px;
+}
+.project-body b {
+    margin-right: 10px;
+}
+.project-btn-cont {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.project-btn {
+    padding: 10px 20px 10px 20px;
+    display: inline-block;  
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-transform:uppercase;
+}
+.project-btn:hover {
+     cursor:pointer;
+}
+.btn-blue {
+    background-color: #9F8FFF;
+}
+.btn-blue:hover {
+    background-color: #7f74cc;
+}
+.btn-salmon {
+    background-color: #FE816D;
+}
+.btn-salmon:hover {
+    background-color: #c66859;
+}
+.btn-purple {
+    background-color: #4573E7;
+}
+.btn-purple:hover {
+    background-color: #5d4dc1;
+}
+.btn-github {
+    background-color: #AAAAAA;
+}
+.btn-github:hover {
+    background-color: #888888;
+}
+.btn-disabled {
+    padding: 10px 20px 10px 20px;
+    display: inline-block;  
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-transform:uppercase;
+    cursor: default;
+    filter: brightness(75%);
+}
+
+.badge-section {
+    width: 100%;
+    padding-top: 10px;
+}
+.custom-badge {
+    padding: 3px 15px 3px 15px;
+    background: none;   
+}
+.badge-lime {
+    border: 1px solid lime;
+    color: lime;
+}
+.badge-green {
+    border: 1px solid green;
+    color: green;
+}
+.badge-red {
+    border: 1px solid red;
+    color: red;
+}
+.badge-blue {
+    border: 1px solid blue;
+    color: blue;
+}
+.badge-pink {
+    border: 1px solid pink;
+    color: pink;
+}
+.badge-orange {
+    border: 1px solid orange;
+    color: orange;
+}
+.badge-purple {
+    border: 1px solid purple;
+    color: purple;
+}
+.badge-cyan {
+    border: 1px solid cyan;
+    color: cyan;
+}
+.badge-blue2 {
+    border: 1px solid #007BFF;
+    color: #007BFF;
+}
+.badge-red2 {
+    border: 1px solid #FF6100;
+    color: #FF6100;
+}
+.links-cont {
+    width: 40vw;
+    margin: 0 auto;
+}
+.links-cont i {
+    font-size: 30px;
+    float: left;
+}
+.links-cont-text {
+    display: inline;
+    padding-top: 15px;
+}
+
+@media (max-width: 728px) {
+    .custom-jumbotron .header-text {
+        font-size:50px;
+    }
+    .custom-jumbotron .outro-text {
+        font-size: 13px;
+    }
+    .custom-header {
+        font-size: 32px;
+    }
+    .custom-about-border {
+        border-left: 0px;
+        border-top: 5px solid #ccc;
+        padding-top: 10px;
+    }
+    .custom-warning {
+        display: block;
+    }
+    .mobile-protection {
+        display: none;
+    }
+    .blog-content img {
+        
+    }
+    .blog-header {
+        font-size: 26px;
+    }
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .custom-about {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .custom-portfolio {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .links-cont {
+        width: 70vw;
+    }
+    .project-btn-cont {
+        margin-bottom: 20px;
+    }
+}
