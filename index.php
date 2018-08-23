@@ -1,39 +1,8 @@
 <?php
 ob_start();
-
-$dbUsername = "ryanc_admin";
-$dbPassword = ";m^T3)=.Ls5=";
-$selectedDatabase = "ryanc_admin";
-
-$connect = mysql_connect("localhost", $dbUsername, $dbPassword) or die(mysql_error());
-mysql_select_db("ryanc_admin");
+require_once "db_connect.php";
 
 // Log Visit
-
-function recordVisit() {
-    $websiteTag = "portfolio";
-    $bot = 'false';
-
-    if (preg_match('/bot|crawl|curl|dataprovider|search|get|spider|find|java|majesticsEO|google|yahoo|teoma|contaxe|yandex|libwww-perl|facebookexternalhit/i', $_SERVER['HTTP_USER_AGENT'])) {
-        $bot = 'true';
-    }
-
-    mysql_query("INSERT INTO `admin.pagevisits` (page, ip, timestamp, website_tag, bot) VALUES('".$_SERVER['PHP_SELF']."','".$_SERVER['REMOTE_ADDR']."','".time()."', '$websiteTag', '$bot')");
-}
-
-function FetchGlobalBanList() {
-    $getBans = mysql_query("SELECT * FROM `admin.globalbans` WHERE `active`='0' AND `ip`='".$_SERVER['REMOTE_ADDR']."'");
-    $banInfo = mysql_fetch_object($getBans);
-
-    if(mysql_num_rows($getBans) != 0) {
-        if(time() < $banInfo->unban_date) {
-            die("Error 403: Access Denied");
-        } else {
-            mysql_query("UPDATE `admin.globalbans` SET `active`='1' WHERE `id`='$banInfo->id'");
-        }
-    }
-}
-
 FetchGlobalBanList();
 recordVisit();
 
@@ -169,7 +138,6 @@ recordVisit();
         <section class="custom-portfolio" id="projects">
             <div class="container portfolio-cont">
                 <h1 class="custom-header" style="padding-bottom: 0px;">My Projects</h1>
-
                 <!-- PILLS
                                 <span class="badge badge-pill custom-badge badge-green">Java</span>
                                 <span class="badge badge-pill custom-badge badge-red">C</span>
@@ -315,12 +283,15 @@ recordVisit();
                                 <div class="col-sm project-btn btn-purple" data-href="#contact">Contact Me</div>
                         </div>
                     </div>
-                
                 </div>  
 
-                <!-- TODO: implement
-                <center><a href="project.php">... or see them all</a></center>
-                -->
+                <!-- see more on GitHub -->
+                <div class="row">
+                    <div class="col-sm project-btn btn-github" data-href="https://github.com/RyanCoulsonCA">
+                            More Available on GitHub
+                    </div>
+                </div>
+                </div>
 
             </div>
         </section>
@@ -349,7 +320,7 @@ recordVisit();
       
                 if(isset($_POST['submit'])) {
                     // Create map with request parameters
-                    $params = array ('secret' => '6LdqFUQUAAAAAPiyqRqYYPRughQRfhMDGIApsfHe', 
+                    $params = array ('secret' => $googleAPI, 
                         'response' => $form_response);
                      
                     // Build Http query using params
@@ -373,8 +344,7 @@ recordVisit();
                      
                     // Server response is now stored in $result variable so you can process it
                     if($result['success'] == 1) {
-                        mysql_query("INSERT INTO `admin.contact` (name, email, phone, ip, message, send_date)
-                            VALUES('$form_name', '$form_email', '$form_phone', '".$_SERVER['REMOTE_ADDR']."', '$form_message', '".time()."')");
+                        submit_email($form_name, $form_email, $form_phone, $_SERVER['REMOTE_ADDR'], $form_message, time());
                         header("Location: ?success=true#success");
                     } else {
                         header("Location: ?error=true#error");
@@ -422,19 +392,3 @@ recordVisit();
           <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
           <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
           <script type="text/javascript" src="slick.min.js"></script>
-
-          <script type="text/javascript">
-            $(document).ready(function(){
-                $('.carousel').slick({
-                  infinite: true,
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  autoplay: true,
-                  accessibility: true,
-                  adaptiveHeight: true,
-                  pauseOnHover: true,
-                  arrows: false,
-                  dots: true
-                });
-            });
-          </script>
